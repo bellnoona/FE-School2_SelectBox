@@ -32,7 +32,7 @@ ulBox.addEventListener('click', (e) => {
     const target =
       e.target.nodeName === 'BUTTON' ? e.target : e.target.childNodes[1];
 
-    console.log(target);
+    // console.log(target);
     if (li.innerText) {
       selectBox.innerText = target.innerText;
 
