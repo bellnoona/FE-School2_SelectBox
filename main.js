@@ -1,7 +1,6 @@
 // 클릭 이벤트
 const selectBox = document.querySelector('.select-box');
 const ulBox = document.querySelector('.language');
-const liBox = document.querySelector('.lang');
 
 selectBox.addEventListener('click', () => {
   if (ulBox.classList.contains('invisible')) {
@@ -19,10 +18,24 @@ selectBox.addEventListener('click', () => {
   }
 });
 
-// list 클릭 시 button에 나타내기
-
+// list 클릭 시 button에 innerText(과목) 나타내기
 const liBtn = document.querySelector('.li-btn');
-liBtn.addEventListener('click', (e) => {
-  console.log(e.target.nodeName);
-  console.log(e.target.innerText);
+const liBox = document.querySelectorAll('.lang');
+
+ulBox.addEventListener('click', (e) => {
+  //   console.log(e.target);
+
+  liBox.forEach((li) => {
+    // console.log(li.innerText);
+    if (li.innerText) {
+      selectBox.innerText = e.target.innerText;
+
+      // 글자 표시해준 후 박스 닫아주기
+      ulBox.classList.add('invisible');
+    } else {
+      return;
+    }
+  });
 });
+
+// 콘솔문의 추후에 제거. 헷갈려서 겁나 찍어놓았음.
