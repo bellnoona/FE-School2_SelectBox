@@ -54,6 +54,10 @@ button {
   display: none;
 }
 
+.select-box.on {
+  background-image: url(./imgs/icon-Triangle-up.png);
+}
+
 .select-box {
   width: 200px;
   height: 40px;
@@ -64,7 +68,7 @@ button {
   line-height: 16px;
   color: #000000;
   padding: 12px 14px;
-  background: url(./imgs/icon-Triangle-down.png) 92% center no-repeat;
+  background: url(./imgs/icon-Triangle-down.png) right 14px center no-repeat;
   cursor: pointer;
   text-align: left;
 }
