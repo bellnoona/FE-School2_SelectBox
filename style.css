@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 * {
@@ -20,14 +21,18 @@ p {
 }
 
 ul {
-  margin: 9px auto;
+  margin: 0;
   padding: 0;
 }
 
 li {
   list-style: none;
-  margin: 0 18px;
+  margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 button {
@@ -36,11 +41,9 @@ button {
   border: none;
   outline: none;
   margin: 0;
-  padding: 0;
 }
 
 .dropdown-box {
-  display: inline-block;
   position: absolute;
   top: 200px;
   left: 50%;
@@ -60,17 +63,17 @@ button {
 
 .select-box {
   width: 200px;
-  height: 40px;
   border: 1px solid #c4c4c4;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: #000000;
-  padding: 12px 14px;
+  padding: 11px 0 11px 12px;
   background: url(./imgs/icon-Triangle-down.png) right 14px center no-repeat;
   cursor: pointer;
   text-align: left;
+  margin-bottom: 9px;
 }
 
 .select-box:hover {
@@ -79,24 +82,38 @@ button {
   border-radius: 10px;
 }
 
-.language {
-  width: 200px;
+ul.language {
+  /* width: 200px; */
   background: #ffffff;
   border: 1px solid #c4c4c4;
-  box-sizing: border-box;
   box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
+  padding: 3px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
 }
-.lang {
-  display: flex;
-  width: 184px;
-  height: 30px;
+
+li.lang {
+  /* padding: 5px 0px 5px 0px; */
+  padding: 12px 18px;
 }
-.lang:hover {
-  width: 184px;
-  height: 30px;
+li.lang:hover {
+  /* width: 184px; */
+  padding: 7px 10px;
   background-color: #f8e4ff;
   border-radius: 8px;
-  margin: 0 8px;
-  padding: 7px 10px;
+  /* margin: 5px 8px; */
+  margin: 5px 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+li.lang button.li-btn {
+  /* width: 44px; */
+  /* padding: 7px 10px; */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
 }

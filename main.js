@@ -4,16 +4,18 @@ const ulBox = document.querySelector('.language');
 
 selectBox.addEventListener('click', () => {
   if (ulBox.classList.contains('invisible')) {
+    // 셀렉트박스 드롭다운 기능(열고 닫기)
     ulBox.classList.remove('invisible');
     ulBox.classList.add('visible');
 
-    // 화살표 이미지 (위 아래) 변경
+    // 화살표 이미지(위아래) 변경
     selectBox.classList.add('on');
   } else {
+    // 셀렉트박스 드롭다운 기능(열고 닫기)
     ulBox.classList.add('invisible');
     ulBox.classList.remove('visible');
 
-    // 화살표 이미지 (위 아래) 변경
+    // 화살표 이미지(위아래) 변경
     selectBox.classList.remove('on');
   }
 });
@@ -23,16 +25,11 @@ const liBtn = document.querySelector('.li-btn');
 const liBox = document.querySelectorAll('.lang');
 
 ulBox.addEventListener('click', (e) => {
-  //   console.log(e.target);
-
   liBox.forEach((li) => {
-    // console.log(li.innerText);
-
     // button영역을 넘어서 li부분을 클릭했을 경우 => li의 childNodes[1] (= button태그 정보)를 target에 담아준다.
     const target =
       e.target.nodeName === 'BUTTON' ? e.target : e.target.childNodes[1];
 
-    // console.log(target);
     if (li.innerText) {
       selectBox.innerText = target.innerText;
 
